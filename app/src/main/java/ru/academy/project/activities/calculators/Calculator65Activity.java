@@ -1,14 +1,16 @@
-package ru.academy.project;
+package ru.academy.project.activities.calculators;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import ru.academy.project.R;
+
+public class Calculator65Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_calculator65);
     }
 }
