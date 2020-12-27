@@ -20,22 +20,22 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:background="@color/brandColor">
+                android:background="@color/brandColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/imageLogo"
-                    android:src="@drawable/logowhite"
-                    android:layout_height="60dp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="200dp"
-                    android:layout_margin="10dp"/>
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/logowhite"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -43,142 +43,118 @@
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                app:layout_constraintTop_toBottomOf="@id/constraint"
+                android:background="#d0d0d0"
                 app:layout_constraintStart_toStartOf="parent"
-                android:background="#d0d0d0"/>
+                app:layout_constraintTop_toBottomOf="@id/constraint" />
 
             <TextView
                 android:id="@+id/titleMEK7300"
-                android:text="Калькулятор МЕК 7300"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:textColor="@color/brandColor"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Калькулятор МЕК 7300"
+                android:textColor="@color/brandColor"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line"/>
+                app:layout_constraintTop_toBottomOf="@+id/line" />
 
             <EditText
                 android:id="@+id/days73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
                 android:hint="Количество рабочих дней в году"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
                 app:layout_constraintTop_toBottomOf="@id/titleMEK7300" />
 
             <EditText
                 android:id="@+id/analyze73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:hint="Количество анализов 5 dif в день"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/days73"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"/>
+                app:layout_constraintTop_toBottomOf="@id/days73" />
 
             <EditText
                 android:id="@+id/analyzeCBC73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:hint="Количество анализов 3 dif в день"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/analyze73"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"/>
+                app:layout_constraintTop_toBottomOf="@id/analyze73" />
 
             <EditText
                 android:id="@+id/control73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:hint="Количество наборов контролей в год"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
                 app:layout_constraintTop_toBottomOf="@id/analyzeCBC73" />
 
             <ImageView
                 android:id="@+id/line2"
                 android:layout_width="match_parent"
                 android:layout_height="16dp"
-                app:layout_constraintTop_toBottomOf="@id/control73"
+                android:background="#d0d0d0"
                 app:layout_constraintStart_toStartOf="parent"
-                android:background="#d0d0d0"/>
+                app:layout_constraintTop_toBottomOf="@id/control73" />
 
             <Button
                 android:id="@+id/calcButton73"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="10dp"
                 android:text="   > Рассчитать"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line2"
-                android:background="@drawable/mybutton"
-                android:textColor="#ffffff"
-                android:gravity="start|center"
-                android:textSize="16sp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                app:layout_constraintTop_toBottomOf="@id/line2" />
 
             <Button
                 android:id="@+id/clearButton73"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="5dp"
                 android:text="   > Очистить"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/calcButton73"
-                android:background="@drawable/mybutton"
-                android:textColor="#ffffff"
-                android:gravity="start|center"
-                android:textSize="16sp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold"/>
+                app:layout_constraintTop_toBottomOf="@id/calcButton73" />
 
             <Button
                 android:id="@+id/toPriceButton73"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
+                android:layout_marginTop="5dp"
                 android:text="   > Ввести стоимость реагентов"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clearButton73"
-                android:background="@drawable/mybutton"
-                android:textColor="#ffffff"
-                android:gravity="start|center"
-                android:textSize="16sp"
-                android:layout_marginEnd="26dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold"/>
+                app:layout_constraintTop_toBottomOf="@+id/clearButton73" />
 
             <TextView
                 android:id="@+id/isoResult73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toPriceButton73" />
@@ -188,11 +164,11 @@
                 android:id="@+id/clResult73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/isoResult73" />
@@ -201,11 +177,11 @@
                 android:id="@+id/cl3Result73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/clResult73" />
@@ -214,11 +190,11 @@
                 android:id="@+id/h3Result73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cl3Result73" />
@@ -227,11 +203,11 @@
                 android:id="@+id/h5Result73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/h3Result73" />
@@ -240,11 +216,11 @@
                 android:id="@+id/allResult73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:textSize="15sp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/h5Result73" />
@@ -253,11 +229,11 @@
                 android:id="@+id/onePrice73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:textSize="15sp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/allResult73" />
@@ -266,11 +242,11 @@
                 android:id="@+id/onlyControl73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/onePrice73" />
@@ -279,11 +255,11 @@
                 android:id="@+id/allResultControl73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/onlyControl73" />
@@ -292,11 +268,11 @@
                 android:id="@+id/onePriceControl73"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:textSize="15sp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="start"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/allResultControl73" />
