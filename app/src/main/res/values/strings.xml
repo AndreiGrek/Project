@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Project</string>
+    <string name="phoneNumber">+375(XX)XXX-XX-XX</string>
+    <string name="addNewContragent">Новый контрагент добавлен</string>
+    <string name="editContragent">Контрагент изменен</string>
+    <string name="deleteContragent">Контрагент удален</string>
+    <string name="DeleteContragent">   > Удалить контрагент</string>
+    <string name="SaveContragent">   > Сохранить контрагент</string>
+    <string name="EnterReagentsPrice">Введите стоимость реагентов</string>
+
 
 </resources>

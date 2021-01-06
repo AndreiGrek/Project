@@ -27,12 +27,30 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/toCalculator65ButtonF"
+        android:layout_width="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_height="70dp"
+        android:background="@drawable/calc"
+        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
     <Button
         android:id="@+id/toCalculator65Button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/calc"
+        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/toContragents65Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="calc"
-        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        android:text="contr"
+        app:layout_constraintTop_toBottomOf="@+id/toCalculator65Button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.prices.Price73Activity"></activity>
+        <activity android:name=".activities.EditContragentActivity"></activity>
+        <activity android:name=".activities.AddContragentActivity" />
+        <activity android:name=".activities.Contragents65Activity" />
+        <activity android:name=".activities.prices.Price73Activity" />
         <activity android:name=".activities.prices.Price65Activity" />
         <activity android:name=".activities.calculators.Calculator73Activity" />
         <activity android:name=".activities.calculators.Calculator65Activity" />

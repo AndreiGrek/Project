@@ -37,14 +37,8 @@
 
     <TextView
         android:id="@+id/tittle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Введите стоимость реагентов"
-        android:textColor="@color/brandColor"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:text="@string/EnterReagentsPrice"
+        style="@style/TextViewStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line" />

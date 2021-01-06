@@ -24,6 +24,14 @@ public class MEK65Activity extends AppCompatActivity {
                 finish();
             }
         });
+        findViewById(R.id.toContragents65Button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MEK65Activity.this, Contragents65Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 }
