@@ -49,8 +49,8 @@
 
             <TextView
                 android:id="@+id/titleMEK6500"
-                android:text="Калькулятор МЕК 6500"
-               style="@style/TextViewStyle"
+                style="@style/TextViewStyle"
+                android:text="@string/Calculator65"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/line" />
@@ -62,7 +62,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Количество рабочих дней в году"
+                android:hint="@string/DaysInYer"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Количество анализов в день"
+                android:hint="@string/AnalyzeCount"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Количество наборов контролей в год"
+                android:hint="@string/ControlsCount"
                 android:inputType="numberDecimal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -104,7 +104,7 @@
                 android:id="@+id/calcButton"
                 style="@style/ButtonStyle"
                 android:layout_marginTop="10dp"
-                android:text="   > Рассчитать"
+                android:text="@string/Calculate"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line2" />
@@ -113,7 +113,7 @@
                 android:id="@+id/clearButton"
                 style="@style/ButtonStyle"
                 android:layout_marginTop="5dp"
-                android:text="   > Очистить"
+                android:text="@string/Clear"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/calcButton" />
@@ -122,7 +122,7 @@
                 android:id="@+id/toPriceButton"
                 style="@style/ButtonStyle"
                 android:layout_marginTop="5dp"
-                android:text="   > Ввести стоимость реагентов"
+                android:text="@string/EnterReagents"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/clearButton" />

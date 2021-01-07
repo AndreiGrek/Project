@@ -38,8 +38,8 @@
 
     <TextView
         android:id="@+id/textAdd"
-        android:text="Добавить контрагент"
         style="@style/TextViewStyle"
+        android:text="@string/AddNewContragent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line" />
@@ -48,7 +48,7 @@
     <EditText
         android:id="@+id/addName"
         style="@style/EditTextStyle"
-        android:hint="Название контрагента"
+        android:hint="@string/ContragentName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textAdd" />
@@ -56,7 +56,7 @@
     <EditText
         android:id="@+id/addPhone"
         style="@style/EditTextStyle"
-        android:hint="+ 375 (29) XXX-XX-XX"
+        android:hint="@string/phoneNumber"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addName" />
@@ -65,7 +65,7 @@
         android:id="@+id/addDescription"
         style="@style/EditTextStyle"
         android:layout_height="100dp"
-        android:hint="Описание"
+        android:hint="@string/Description"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/addPhone" />
@@ -75,8 +75,8 @@
         style="@style/ButtonStyle"
         android:layout_marginTop="160dp"
         android:text="@string/SaveContragent"
-       app:layout_constraintTop_toBottomOf="@+id/addDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

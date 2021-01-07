@@ -39,7 +39,7 @@
         android:id="@+id/to6500button"
         style="@style/ButtonStyle"
         android:layout_marginTop="10dp"
-        android:text="  >   MEK 6500"
+        android:text="@string/MEK65"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line" />
@@ -48,7 +48,7 @@
         android:id="@+id/to7300button"
         style="@style/ButtonStyle"
         android:layout_marginTop="5dp"
-        android:text="  >   MEK 7300"
+        android:text="@string/MEK73"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/to6500button" />

@@ -1,12 +1,49 @@
 <resources>
     <string name="app_name">Project</string>
     <string name="phoneNumber">+375(XX)XXX-XX-XX</string>
+    <string name="ContragentName">Название контралента</string>
     <string name="addNewContragent">Новый контрагент добавлен</string>
     <string name="editContragent">Контрагент изменен</string>
     <string name="deleteContragent">Контрагент удален</string>
     <string name="DeleteContragent">   > Удалить контрагент</string>
     <string name="SaveContragent">   > Сохранить контрагент</string>
     <string name="EnterReagentsPrice">Введите стоимость реагентов</string>
-
+    <string name="AddNewContragent">Добавить контрагент</string>
+    <string name="EditContragent">Изменить контрагент</string>
+    <string name="Description">Описание</string>
+    <string name="Calculator65">Калькулятор МЕК 6500</string>
+    <string name="Calculator73">Калькулятор МЕК 7300</string>
+    <string name="DaysInYer">Количество рабочих дней в году</string>
+    <string name="AnalyzeCount">Количество анализов в день</string>
+    <string name="AnalyzeCount3d">Количество анализов 3dif в день</string>
+    <string name="AnalyzeCount5d">Количество анализов 5dif в день</string>
+    <string name="ControlsCount">Количество наборов контролей в год</string>
+    <string name="Calculate">  > Рассчитать</string>
+    <string name="Clear">> Очистить</string>
+    <string name="EnterReagents">  > Ввести стоимость реагентов</string>
+    <string name="MEK65">> MEK 6500</string>
+    <string name="MEK65Text">MEK 6500</string>
+    <string name="MEK73">> MEK 7300</string>
+    <string name="Isotonac">Isotonac</string>
+    <string name="Cleanac">Cleanac</string>
+    <string name="Cleanac3">Cleanac3</string>
+    <string name="Hemolynac3">Hemolynac3</string>
+    <string name="Hemolynac5">Hemolynac5</string>
+    <string name="Controls3d">Набор контролей 3d</string>
+    <string name="Controls5d">Набор контролей 5d</string>
+    <string name="SavePrice"> > Сохранить цены</string>
+    <string name="Parameters">Parameters: </string>
+    <string name="Reagents">Reagents: </string>
+    <string name="Reagents65">1 hemolyzing reagent (cyanide "\n"
+        free), 1 diluent, 2 detergents</string>
+    <string name="Parameters65">WBC, LY%, MO%, GR%, LY, "\n"
+        MO, GR, RBC, HGB, HCT, "\n"
+        MCV, MCH, MCHC, RDW-SD, PLT,"\n"
+        PCT, MPV, PDW, RDW-CV</string>
+    <string name="Sample">Sample: </string>
+    <string name="Dimensions">Dimensions: </string>
+    <string name="Dimensions65">230 W × 450 D × 428 H mm, "\n" 20kg</string>
+    <string name="Sample65">30μL for normal measurement"\n"
+    10 or 20 μL for pre-dilution</string>
 
 </resources>
