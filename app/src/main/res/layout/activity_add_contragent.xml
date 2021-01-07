@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".activities.AddContragentActivity">
+    tools:context=".activities.fragments.AddContragentFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
@@ -73,9 +73,9 @@
     <Button
         android:id="@+id/buttonAdd"
         style="@style/ButtonStyle"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="160dp"
         android:text="@string/SaveContragent"
-        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/addDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
