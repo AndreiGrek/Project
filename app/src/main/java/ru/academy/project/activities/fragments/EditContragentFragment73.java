@@ -16,19 +16,21 @@ import java.util.List;
 
 import ru.academy.project.R;
 import ru.academy.project.activities.Contragents65Activity;
+import ru.academy.project.activities.Contragents73Activity;
 import ru.academy.project.data.database.AppDatabase;
 import ru.academy.project.data.database.Contragent;
+import ru.academy.project.data.database.Contragent73;
 import ru.academy.project.presentors.Presentor;
 
-public class EditContragentFragment extends Fragment {
+public class EditContragentFragment73 extends Fragment {
 
     private String name, phone, description;
     private int position;
     private AppDatabase db;
-    private List<Contragent> contragentList;
+    private List<Contragent73> contragentList;
     private Presentor presentor;
 
-    public EditContragentFragment(String name, String phone, String description, int position) {
+    public EditContragentFragment73(String name, String phone, String description, int position) {
         this.name = name;
         this.phone = phone;
         this.description = description;
@@ -56,28 +58,28 @@ public class EditContragentFragment extends Fragment {
         view.findViewById(R.id.buttonSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentSaved = new Intent(EditContragentFragment.this.getActivity(), Contragents65Activity.class);
+                Intent intentSaved = new Intent(EditContragentFragment73.this.getActivity(), Contragents73Activity.class);
                 name = editName.getText().toString();
                 phone = editData.getText().toString();
                 description = editDescription.getText().toString();
                 presentor = new Presentor();
-                presentor.updateDb(db, position, name, phone, description );
-                Toast.makeText(EditContragentFragment.this.getActivity(), R.string.editContragent, Toast.LENGTH_SHORT).show();
+                presentor.updateDb73(db, position, name, phone, description );
+                Toast.makeText(EditContragentFragment73.this.getActivity(), R.string.editContragent, Toast.LENGTH_SHORT).show();
                 startActivity(intentSaved);
-                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment.this).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment73.this).commit();
             }
         });
 
         view.findViewById(R.id.buttonDelete).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentDelete = new Intent(EditContragentFragment.this.getActivity(), Contragents65Activity.class);
+                Intent intentDelete = new Intent(EditContragentFragment73.this.getActivity(), Contragents73Activity.class);
                 presentor = new Presentor();
-                contragentList = presentor.contragentList(db);
-                presentor.deleteFromDb(db, contragentList, position);
-                Toast.makeText(EditContragentFragment.this.getActivity(), R.string.deleteContragent, Toast.LENGTH_SHORT).show();
+                contragentList = presentor.contragentList73(db);
+                presentor.deleteFromDb73(db, contragentList, position);
+                Toast.makeText(EditContragentFragment73.this.getActivity(), R.string.deleteContragent, Toast.LENGTH_SHORT).show();
                 startActivity(intentDelete);
-                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment.this).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment73.this).commit();
             }
         });
     }

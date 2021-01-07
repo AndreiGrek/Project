@@ -13,12 +13,13 @@ import java.util.List;
 
 import ru.academy.project.R;
 import ru.academy.project.data.database.Contragent;
+import ru.academy.project.data.database.Contragent73;
 
-public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHolder> {
-    private List<Contragent> itemList;
+public class ItemListAdapter73 extends RecyclerView.Adapter<ItemListAdapter73.ItemViewHolder> {
+    private List<Contragent73> itemList;
 
 
-    public ItemListAdapter(List<Contragent> itemList) {
+    public ItemListAdapter73(List<Contragent73> itemList) {
         this.itemList = itemList;
     }
 
@@ -43,7 +44,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         holder.bind(position);
-        Contragent currentItem = itemList.get(position);
+        Contragent73 currentItem = itemList.get(position);
         holder.textViewName.setText(currentItem.getName());
         holder.phoneView.setText(currentItem.getData());
     }

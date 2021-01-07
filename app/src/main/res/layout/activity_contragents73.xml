@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Contragents65Activity">
+    tools:context=".activities.Contragents73Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
@@ -37,13 +37,11 @@
         app:layout_constraintTop_toBottomOf="@id/constraint" />
 
     <FrameLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/line">
 
         <androidx.recyclerview.widget.RecyclerView
-
             android:id="@+id/itemList"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

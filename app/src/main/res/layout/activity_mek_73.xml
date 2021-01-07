@@ -6,14 +6,133 @@
     android:layout_height="match_parent"
     tools:context=".activities.MEK73Activity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/brandColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/logowhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint" />
+
+    <TextView
+        android:id="@+id/title65"
+        style="@style/TextViewStyle"
+        android:text="@string/MEK73Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title65">
+
+        <TableRow android:id="@+id/row1">
+
+            <TextView
+                android:id="@+id/text"
+                style="@style/TableTextStyle"
+                android:text="@string/Parameters" />
+
+            <TextView
+                android:id="@+id/text2"
+                style="@style/TableTextStyle"
+                android:layout_marginStart="40dp"
+                android:text="@string/Parameters65" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text3"
+                style="@style/TableTextStyle"
+                android:text="@string/Reagents" />
+
+            <TextView
+                android:id="@+id/text4"
+                style="@style/TableTextStyle"
+                android:layout_marginStart="40dp"
+                android:text="@string/Reagents65" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text5"
+                style="@style/TableTextStyle"
+                android:text="@string/Sample" />
+
+            <TextView
+                android:id="@+id/text6"
+                style="@style/TableTextStyle"
+                android:layout_marginStart="40dp"
+                android:text="@string/Sample65" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row4"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text7"
+                style="@style/TableTextStyle"
+                android:text="@string/Dimensions" />
+
+            <TextView
+                android:id="@+id/text8"
+                style="@style/TableTextStyle"
+                android:layout_marginStart="40dp"
+                android:text="@string/Dimensions65" />
+        </TableRow>
+
+    </TableLayout>
+
     <Button
         android:id="@+id/toCalculator73Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="calc"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/toContragents73Button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/list"
+        app:layout_constraintBottom_toTopOf="@id/toCalculator73Button"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ import ru.academy.project.data.database.AppDatabase;
 import ru.academy.project.data.database.Contragent;
 import ru.academy.project.presentors.Presentor;
 
-public class AddContragentFragment extends Fragment {
+public class AddContragentFragment73 extends Fragment {
     private String name, phone, description;
     private AppDatabase db;
     private int counter;
@@ -46,18 +46,18 @@ public class AddContragentFragment extends Fragment {
         view.findViewById(R.id.buttonAdd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentSave = new Intent(AddContragentFragment.this.getActivity(), Contragents65Activity.class);
+                Intent intentSave = new Intent(AddContragentFragment73.this.getActivity(), Contragents73Activity.class);
                 name = editName.getText().toString();
                 phone = editData.getText().toString();
                 description = editDescription.getText().toString();
                 loadCounter();
                 presentor = new Presentor();
-                presentor.insertIntoDb(db, counter, name, phone, description );
-                Toast.makeText(AddContragentFragment.this.getActivity(), R.string.addNewContragent, Toast.LENGTH_SHORT).show();
+                presentor.insertIntoDb73(db, counter, name, phone, description );
+                Toast.makeText(AddContragentFragment73.this.getActivity(), R.string.addNewContragent, Toast.LENGTH_SHORT).show();
                 counter++;
                 saveCounter(counter);
                 startActivity(intentSave);
-                getActivity().getSupportFragmentManager().beginTransaction().remove(AddContragentFragment.this).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(AddContragentFragment73.this).commit();
             }
         });
     }

@@ -23,6 +23,7 @@
     <string name="EnterReagents">  > Ввести стоимость реагентов</string>
     <string name="MEK65">> MEK 6500</string>
     <string name="MEK65Text">MEK 6500</string>
+    <string name="MEK73Text">MEK 7300</string>
     <string name="MEK73">> MEK 7300</string>
     <string name="Isotonac">Isotonac</string>
     <string name="Cleanac">Cleanac</string>
