@@ -117,8 +117,8 @@
 
     <Button
         android:id="@+id/toCalculator73Button"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/calc"
@@ -129,7 +129,7 @@
         android:id="@+id/toContragents73Button"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="19dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/list"
         app:layout_constraintBottom_toTopOf="@id/toCalculator73Button"

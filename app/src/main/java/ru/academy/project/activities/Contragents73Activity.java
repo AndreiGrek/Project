@@ -1,5 +1,6 @@
 package ru.academy.project.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -54,6 +55,15 @@ public class Contragents73Activity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(R.id.container73, myFragment).commit();
+            }
+        });
+
+        findViewById(R.id.homeIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toMainActivity = new Intent(Contragents73Activity.this, MainActivity.class);
+                startActivity(toMainActivity);
+                finish();
             }
         });
     }
