@@ -15,12 +15,12 @@ import java.util.List;
 import ru.academy.project.R;
 import ru.academy.project.activities.fragments.AddContragentFragment65;
 import ru.academy.project.activities.fragments.EditContragentFragment65;
-import ru.academy.project.data.ItemListAdapter;
+import ru.academy.project.data.ItemListAdapter65;
 import ru.academy.project.data.database.AppDatabase;
 import ru.academy.project.data.database.Contragent65;
 
 public class Contragents65Activity extends AppCompatActivity {
-    private ItemListAdapter itemListAdapter;
+    private ItemListAdapter65 itemListAdapter65;
     private AppDatabase db;
     private List<Contragent65> itemList;
     private Contragent65 contragent65;
@@ -33,8 +33,8 @@ public class Contragents65Activity extends AppCompatActivity {
         db = AppDatabase.getInstance(this);
         itemList = db.contragentDao().getAll();
         RecyclerView recyclerView = findViewById(R.id.itemList);
-        itemListAdapter = new ItemListAdapter(itemList);
-        recyclerView.setAdapter(itemListAdapter);
+        itemListAdapter65 = new ItemListAdapter65(itemList);
+        recyclerView.setAdapter(itemListAdapter65);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
         findViewById(R.id.addIcon).setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class Contragents65Activity extends AppCompatActivity {
             }
         });
 
-        itemListAdapter.setOnItemClickListener(new ItemListAdapter.OnItemClickListener() {
+        itemListAdapter65.setOnItemClickListener(new ItemListAdapter65.OnItemClickListener() {
             @Override
             public void onItemClick(int position, String name, String data) {
                 contragent65 = itemList.get(position);

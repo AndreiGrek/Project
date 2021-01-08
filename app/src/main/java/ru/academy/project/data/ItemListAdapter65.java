@@ -14,10 +14,10 @@ import java.util.List;
 import ru.academy.project.R;
 import ru.academy.project.data.database.Contragent65;
 
-public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHolder> {
+public class ItemListAdapter65 extends RecyclerView.Adapter<ItemListAdapter65.ItemViewHolder> {
     private List<Contragent65> itemList;
 
-    public ItemListAdapter(List<Contragent65> itemList) {
+    public ItemListAdapter65(List<Contragent65> itemList) {
         this.itemList = itemList;
     }
 
