@@ -1,7 +1,5 @@
 package ru.academy.project.activities.prices;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import ru.academy.project.R;
 import ru.academy.project.activities.calculators.Calculator73Activity;
@@ -40,7 +40,6 @@ public class Price73Activity extends AppCompatActivity {
         hemolynac3Price = findViewById(R.id.hemolynac3Price73);
         hemolynac5Price = findViewById(R.id.hemolynac5Price73);
         controlPrice = findViewById(R.id.controlPrice73);
-
 
         findViewById(R.id.saveReagentsButton73).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,10 +1,10 @@
 package ru.academy.project.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import ru.academy.project.R;
 

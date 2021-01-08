@@ -11,9 +11,9 @@ public class Cleanac3 {
     private int cl3Bottle;
 
     public int cleanac3Calc(double days, double analyze) {
-        cl3YearPOn =  cl3AllTestPOn * days /  cl3Value;
-        cl3YearPOff =  cl3AlltestOff * days /  cl3Value;
-        cl3Bottle = (int) Math.ceil( cl3YearPOn +  cl3YearTest +  cl3YearPOff);
-        return  cl3Bottle;
+        cl3YearPOn = cl3AllTestPOn * days / cl3Value;
+        cl3YearPOff = cl3AlltestOff * days / cl3Value;
+        cl3Bottle = (int) Math.ceil(cl3YearPOn + cl3YearTest + cl3YearPOff);
+        return cl3Bottle;
     }
 }

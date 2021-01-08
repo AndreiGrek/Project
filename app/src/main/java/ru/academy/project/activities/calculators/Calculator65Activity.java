@@ -12,7 +12,6 @@ import ru.academy.project.R;
 import ru.academy.project.activities.prices.Price65Activity;
 import ru.academy.project.calculators.Calculator65;
 
-
 public class Calculator65Activity extends AppCompatActivity {
 
     private EditText editTextDays, editTextAnalyze, editTextControl;
@@ -119,5 +118,4 @@ public class Calculator65Activity extends AppCompatActivity {
             }
         });
     }
-
 }

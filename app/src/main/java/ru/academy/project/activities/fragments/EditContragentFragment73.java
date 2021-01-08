@@ -15,10 +15,8 @@ import androidx.fragment.app.Fragment;
 import java.util.List;
 
 import ru.academy.project.R;
-import ru.academy.project.activities.Contragents65Activity;
 import ru.academy.project.activities.Contragents73Activity;
 import ru.academy.project.data.database.AppDatabase;
-import ru.academy.project.data.database.Contragent;
 import ru.academy.project.data.database.Contragent73;
 import ru.academy.project.presentors.Presentor;
 
@@ -29,11 +27,11 @@ public class EditContragentFragment73 extends Fragment {
     private AppDatabase db;
     private List<Contragent73> contragentList;
     private Presentor presentor;
+    private Contragent73 contragent73;
+    private int id;
 
-    public EditContragentFragment73(String name, String phone, String description, int position) {
-        this.name = name;
-        this.phone = phone;
-        this.description = description;
+    public EditContragentFragment73(Contragent73 contragent73, int position) {
+        this.contragent73 = contragent73;
         this.position = position;
     }
 
@@ -50,9 +48,9 @@ public class EditContragentFragment73 extends Fragment {
         final EditText editData = view.findViewById(R.id.editPhone);
         final EditText editDescription = view.findViewById(R.id.editDescription);
 
-        editName.setText(name);
-        editData.setText(phone);
-        editDescription.setText(description);
+        editName.setText(contragent73.getName());
+        editData.setText(contragent73.getData());
+        editDescription.setText(contragent73.getDescription());
         db = AppDatabase.getInstance(this.getActivity());
 
         view.findViewById(R.id.buttonSave).setOnClickListener(new View.OnClickListener() {
@@ -63,7 +61,9 @@ public class EditContragentFragment73 extends Fragment {
                 phone = editData.getText().toString();
                 description = editDescription.getText().toString();
                 presentor = new Presentor();
-                presentor.updateDb73(db, position, name, phone, description );
+                id = contragent73.getId();
+                contragent73 = new Contragent73(name, phone, description);
+                presentor.updateDb73(db, contragent73, id);
                 Toast.makeText(EditContragentFragment73.this.getActivity(), R.string.editContragent, Toast.LENGTH_SHORT).show();
                 startActivity(intentSaved);
                 getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment73.this).commit();

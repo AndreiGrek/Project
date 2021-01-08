@@ -12,13 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ru.academy.project.R;
-import ru.academy.project.data.database.Contragent;
+import ru.academy.project.data.database.Contragent65;
 
 public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemViewHolder> {
-    private List<Contragent> itemList;
+    private List<Contragent65> itemList;
 
-
-    public ItemListAdapter(List<Contragent> itemList) {
+    public ItemListAdapter(List<Contragent65> itemList) {
         this.itemList = itemList;
     }
 
@@ -43,7 +42,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ItemVi
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         holder.bind(position);
-        Contragent currentItem = itemList.get(position);
+        Contragent65 currentItem = itemList.get(position);
         holder.textViewName.setText(currentItem.getName());
         holder.phoneView.setText(currentItem.getData());
     }

@@ -12,23 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ru.academy.project.R;
-import ru.academy.project.activities.fragments.AddContragentFragment;
 import ru.academy.project.activities.fragments.AddContragentFragment73;
-import ru.academy.project.activities.fragments.EditContragentFragment;
 import ru.academy.project.activities.fragments.EditContragentFragment73;
 import ru.academy.project.data.ItemListAdapter73;
 import ru.academy.project.data.database.AppDatabase;
-import ru.academy.project.data.database.Contragent;
-import ru.academy.project.data.ItemListAdapter;
 import ru.academy.project.data.database.Contragent73;
-
 
 public class Contragents73Activity extends AppCompatActivity {
     private ItemListAdapter73 itemListAdapter;
-    final private String POSITION = "POSITION";
     private AppDatabase db;
     private List<Contragent73> itemList;
-    private String description;
+    private Contragent73 contragent73;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +42,18 @@ public class Contragents73Activity extends AppCompatActivity {
                 AddContragentFragment73 addContragentFragment73 = new AddContragentFragment73();
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container, addContragentFragment73).commit();
+                fragmentTransaction.add(R.id.container73, addContragentFragment73).commit();
             }
         });
 
         itemListAdapter.setOnItemClickListener(new ItemListAdapter73.OnItemClickListener() {
             @Override
             public void onItemClick(int position, String name, String data) {
-                description = itemList.get(position).getDescription();
-                EditContragentFragment73 myFragment = new EditContragentFragment73(name, data, description, position);
+                contragent73 = itemList.get(position);
+                EditContragentFragment73 myFragment = new EditContragentFragment73(contragent73, position);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container, myFragment).commit();
+                fragmentTransaction.add(R.id.container73, myFragment).commit();
             }
         });
     }

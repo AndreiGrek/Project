@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ru.academy.project.R;
-import ru.academy.project.data.database.Contragent;
 import ru.academy.project.data.database.Contragent73;
 
 public class ItemListAdapter73 extends RecyclerView.Adapter<ItemListAdapter73.ItemViewHolder> {

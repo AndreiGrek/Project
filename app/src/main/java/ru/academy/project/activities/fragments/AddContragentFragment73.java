@@ -1,8 +1,6 @@
 package ru.academy.project.activities.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,17 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import ru.academy.project.R;
-import ru.academy.project.activities.Contragents65Activity;
 import ru.academy.project.activities.Contragents73Activity;
 import ru.academy.project.data.database.AppDatabase;
-import ru.academy.project.data.database.Contragent;
 import ru.academy.project.presentors.Presentor;
 
 public class AddContragentFragment73 extends Fragment {
     private String name, phone, description;
     private AppDatabase db;
-    private int counter;
-    private SharedPreferences sPref;
     private Presentor presentor;
 
     @Nullable
@@ -40,7 +34,6 @@ public class AddContragentFragment73 extends Fragment {
         final EditText editName = view.findViewById(R.id.addName);
         final EditText editData = view.findViewById(R.id.addPhone);
         final EditText editDescription = view.findViewById(R.id.addDescription);
-
         db = AppDatabase.getInstance(this.getActivity());
 
         view.findViewById(R.id.buttonAdd).setOnClickListener(new View.OnClickListener() {
@@ -50,28 +43,12 @@ public class AddContragentFragment73 extends Fragment {
                 name = editName.getText().toString();
                 phone = editData.getText().toString();
                 description = editDescription.getText().toString();
-                loadCounter();
                 presentor = new Presentor();
-                presentor.insertIntoDb73(db, counter, name, phone, description );
+                presentor.insertIntoDb73(db, name, phone, description);
                 Toast.makeText(AddContragentFragment73.this.getActivity(), R.string.addNewContragent, Toast.LENGTH_SHORT).show();
-                counter++;
-                saveCounter(counter);
                 startActivity(intentSave);
                 getActivity().getSupportFragmentManager().beginTransaction().remove(AddContragentFragment73.this).commit();
             }
         });
-    }
-
-    void saveCounter(int counter) {
-        sPref = this.getActivity().getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor ed = sPref.edit();
-        ed.putInt("COUNTER", counter);
-        ed.apply();
-    }
-
-    public int loadCounter() {
-        sPref = this.getActivity().getPreferences(Context.MODE_PRIVATE);
-        this.counter = sPref.getInt("COUNTER", 0);
-        return counter;
     }
 }

@@ -17,21 +17,21 @@ import java.util.List;
 import ru.academy.project.R;
 import ru.academy.project.activities.Contragents65Activity;
 import ru.academy.project.data.database.AppDatabase;
-import ru.academy.project.data.database.Contragent;
+import ru.academy.project.data.database.Contragent65;
 import ru.academy.project.presentors.Presentor;
 
-public class EditContragentFragment extends Fragment {
+public class EditContragentFragment65 extends Fragment {
 
     private String name, phone, description;
     private int position;
     private AppDatabase db;
-    private List<Contragent> contragentList;
+    private List<Contragent65> contragent65List;
     private Presentor presentor;
+    private int id;
+    private Contragent65 contragent65;
 
-    public EditContragentFragment(String name, String phone, String description, int position) {
-        this.name = name;
-        this.phone = phone;
-        this.description = description;
+    public EditContragentFragment65(Contragent65 contragent65, int position) {
+        this.contragent65 = contragent65;
         this.position = position;
     }
 
@@ -48,37 +48,40 @@ public class EditContragentFragment extends Fragment {
         final EditText editData = view.findViewById(R.id.editPhone);
         final EditText editDescription = view.findViewById(R.id.editDescription);
 
-        editName.setText(name);
-        editData.setText(phone);
-        editDescription.setText(description);
+        editName.setText(contragent65.getName());
+        editData.setText(contragent65.getData());
+        editDescription.setText(contragent65.getDescription());
         db = AppDatabase.getInstance(this.getActivity());
 
         view.findViewById(R.id.buttonSave).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentSaved = new Intent(EditContragentFragment.this.getActivity(), Contragents65Activity.class);
+                Intent intentSaved = new Intent(EditContragentFragment65.this.getActivity(), Contragents65Activity.class);
                 name = editName.getText().toString();
                 phone = editData.getText().toString();
                 description = editDescription.getText().toString();
                 presentor = new Presentor();
-                presentor.updateDb(db, position, name, phone, description );
-                Toast.makeText(EditContragentFragment.this.getActivity(), R.string.editContragent, Toast.LENGTH_SHORT).show();
+                id = contragent65.getId();
+                contragent65 = new Contragent65(name, phone, description);
+                presentor.updateDb(db, contragent65, id);
+                Toast.makeText(EditContragentFragment65.this.getActivity(), R.string.editContragent, Toast.LENGTH_SHORT).show();
                 startActivity(intentSaved);
-                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment.this).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment65.this).commit();
             }
         });
 
         view.findViewById(R.id.buttonDelete).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentDelete = new Intent(EditContragentFragment.this.getActivity(), Contragents65Activity.class);
+                Intent intentDelete = new Intent(EditContragentFragment65.this.getActivity(), Contragents65Activity.class);
                 presentor = new Presentor();
-                contragentList = presentor.contragentList(db);
-                presentor.deleteFromDb(db, contragentList, position);
-                Toast.makeText(EditContragentFragment.this.getActivity(), R.string.deleteContragent, Toast.LENGTH_SHORT).show();
+                contragent65List = presentor.contragentList(db);
+                presentor.deleteFromDb(db, contragent65List, position);
+                Toast.makeText(EditContragentFragment65.this.getActivity(), R.string.deleteContragent, Toast.LENGTH_SHORT).show();
                 startActivity(intentDelete);
-                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment.this).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().remove(EditContragentFragment65.this).commit();
             }
         });
     }
 }
+

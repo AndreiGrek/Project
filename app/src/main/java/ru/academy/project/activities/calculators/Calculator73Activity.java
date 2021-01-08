@@ -1,27 +1,17 @@
 package ru.academy.project.activities.calculators;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.text.DecimalFormat;
 
 import ru.academy.project.R;
 import ru.academy.project.activities.prices.Price73Activity;
 import ru.academy.project.calculators.Calculator73;
-import ru.academy.project.data.reagents.MEK73.Cleanac;
-import ru.academy.project.data.reagents.MEK73.Cleanac3;
-import ru.academy.project.data.reagents.MEK73.Hemolynac3;
-import ru.academy.project.data.reagents.MEK73.Hemolynac5;
-import ru.academy.project.data.reagents.MEK73.Isotonac;
 
 public class Calculator73Activity extends AppCompatActivity {
 

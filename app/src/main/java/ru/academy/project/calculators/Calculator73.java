@@ -22,7 +22,6 @@ public class Calculator73 {
     private Hemolynac5 hemolynac5;
     private double days, analyze, analyzeCBC, allPrice, allPriceControl;
 
-
     private String isoPrice = "Стоимость Isotonac3";
     private String clPrice = "Стоимость Cleanac";
     private String cl3Price = "Стоимость Cleanac3";

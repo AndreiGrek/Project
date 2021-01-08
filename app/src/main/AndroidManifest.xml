@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.Contragents73Activity"></activity>
-        <activity android:name=".activities.fragments.EditContragentFragment" />
-        <activity android:name=".activities.fragments.AddContragentFragment" />
+        <activity android:name=".activities.fragments.EditContragentFragment65" />
+        <activity android:name=".activities.fragments.AddContragentFragment65" />
         <activity android:name=".activities.Contragents65Activity" />
         <activity android:name=".activities.prices.Price73Activity" />
         <activity android:name=".activities.prices.Price65Activity" />

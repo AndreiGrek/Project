@@ -3,13 +3,17 @@ package ru.academy.project.data.database;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity (tableName = "Contragent73")
+@Entity(tableName = "Contragent73")
 public class Contragent73 {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id;
     private String name;
     private String data;
     private String description;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -27,8 +31,7 @@ public class Contragent73 {
         return id;
     }
 
-    public Contragent73(int id, String name, String data, String description) {
-        this.id = id;
+    public Contragent73(String name, String data, String description) {
         this.name = name;
         this.data = data;
         this.description = description;

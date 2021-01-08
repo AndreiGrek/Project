@@ -52,10 +52,12 @@
         app:layout_constraintTop_toBottomOf="@id/title65">
 
         <TableRow android:id="@+id/row1">
+
             <TextView
                 android:id="@+id/text"
                 style="@style/TableTextStyle"
                 android:text="@string/Parameters" />
+
             <TextView
                 android:id="@+id/text2"
                 style="@style/TableTextStyle"
@@ -63,12 +65,15 @@
                 android:text="@string/Parameters65" />
         </TableRow>
 
-        <TableRow android:id="@+id/row2"
+        <TableRow
+            android:id="@+id/row2"
             android:layout_marginTop="10dp">
+
             <TextView
                 android:id="@+id/text3"
                 style="@style/TableTextStyle"
                 android:text="@string/Reagents" />
+
             <TextView
                 android:id="@+id/text4"
                 style="@style/TableTextStyle"
@@ -76,12 +81,15 @@
                 android:text="@string/Reagents65" />
         </TableRow>
 
-        <TableRow android:id="@+id/row3"
+        <TableRow
+            android:id="@+id/row3"
             android:layout_marginTop="10dp">
+
             <TextView
                 android:id="@+id/text5"
                 style="@style/TableTextStyle"
                 android:text="@string/Sample" />
+
             <TextView
                 android:id="@+id/text6"
                 style="@style/TableTextStyle"
@@ -89,12 +97,15 @@
                 android:text="@string/Sample65" />
         </TableRow>
 
-        <TableRow android:id="@+id/row4"
+        <TableRow
+            android:id="@+id/row4"
             android:layout_marginTop="10dp">
+
             <TextView
                 android:id="@+id/text7"
                 style="@style/TableTextStyle"
                 android:text="@string/Dimensions" />
+
             <TextView
                 android:id="@+id/text8"
                 style="@style/TableTextStyle"

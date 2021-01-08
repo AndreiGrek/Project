@@ -37,8 +37,8 @@
 
     <TextView
         android:id="@+id/tittle"
-        android:text="@string/EnterReagentsPrice"
         style="@style/TextViewStyle"
+        android:text="@string/EnterReagentsPrice"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line" />
